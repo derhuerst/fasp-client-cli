@@ -20,7 +20,12 @@ Or use [`npx`](https://npmjs.com/package/npx).
 ## Usage
 
 ```js
-todo
+fasp-server --scan
+    Searches for receivers and lets you pick one. Also connects to it.
+fasp-server
+    Connects to the receiver you used the last time.
+fasp-server [--receiver <id>]
+    Connects to the receiver with the specified ID.
 ```
 
 

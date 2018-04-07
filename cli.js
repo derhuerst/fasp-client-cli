@@ -6,12 +6,21 @@ const mri = require('mri')
 const pkg = require('./package.json')
 
 const argv = mri(process.argv.slice(2), {
-	boolean: ['help', 'h', 'version', 'v']
+	boolean: [
+		'help', 'h',
+		'version', 'v',
+		'scan'
+	]
 })
 
 if (argv.help || argv.h) {
 	process.stdout.write(`
-todo
+fasp-server --scan
+    Searches for receivers and lets you pick one. Also connects to it.
+fasp-server
+    Connects to the receiver you used the last time.
+fasp-server [--receiver <id>]
+    Connects to the receiver with the specified ID.
 \n`)
 	process.exit(0)
 }
@@ -38,7 +47,9 @@ const createUi = require('./lib/ui')
 
 const main = async () => {
 	let cfg = await readConfig()
-	if (!cfg || !cfg.receiver) {
+	if (argv.receiver) {
+		cfg.receiver = argv.receiver
+	} if (argv.scan || !cfg || !cfg.receiver) {
 		cfg.receiver = await promptWhichReceiver()
 		await writeConfig(cfg)
 	}
