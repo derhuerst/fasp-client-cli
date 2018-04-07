@@ -28,6 +28,7 @@ const showError = (err) => {
 }
 
 const createClient = require('fasp-client')
+const withLocalFiles = require('fasp-client/with-local-files')
 
 const readConfig = require('./lib/read-config')
 const promptWhichReceiver = require('./lib/prompt-which-receiver')
@@ -48,6 +49,7 @@ const main = async () => {
 		ui.setStatus(status)
 	}
 	const client = createClient(address, onStatus)
+	withLocalFiles(client)
 	const ui = createUi(client)
 }
 
