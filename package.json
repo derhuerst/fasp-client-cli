@@ -1,0 +1,25 @@
+{
+	"name": "fasp-client-cli",
+	"description": "Control Friendly Audio Streaming Protocol receivers from the command line.",
+	"version": "0.1.0",
+	"bin": {
+		"fasp-server": "./cli.js"
+	},
+	"files": [
+		"cli.js"
+	],
+	"keywords": [
+		"todo"
+	],
+	"author": "Jannis R <mail@jannisr.de>",
+	"homepage": "https://github.com/derhuerst/fasp-client-cli",
+	"repository": "derhuerst/fasp-client-cli",
+	"bugs": "https://github.com/derhuerst/fasp-client-cli/issues",
+	"license": "ISC",
+	"engines": {
+		"node": ">=7.6"
+	},
+	"dependencies": {
+		"mri": "^1.1.0"
+	}
+}
