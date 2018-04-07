@@ -6,7 +6,8 @@
 		"fasp-server": "./cli.js"
 	},
 	"files": [
-		"cli.js"
+		"cli.js",
+		"lib"
 	],
 	"keywords": [
 		"todo"
@@ -20,6 +21,10 @@
 		"node": ">=7.6"
 	},
 	"dependencies": {
-		"mri": "^1.1.0"
+		"env-paths": "^1.0.0",
+		"mkdirp": "^0.5.1",
+		"mri": "^1.1.0",
+		"search-fasp-receivers": "^0.1.0",
+		"select-prompt": "^0.3.1"
 	}
 }
