@@ -27,4 +27,29 @@ const showError = (err) => {
 	process.exit(1)
 }
 
-// todo
+const createClient = require('fasp-client')
+
+const readConfig = require('./lib/read-config')
+const promptWhichReceiver = require('./lib/prompt-which-receiver')
+const writeConfig = require('./lib/write-config')
+const findReceiverAddress = require('./lib/find-receiver-address')
+const createUi = require('./lib/ui')
+
+const main = async () => {
+	let cfg = await readConfig()
+	if (!cfg || !cfg.receiver) {
+		cfg.receiver = await promptWhichReceiver()
+		await writeConfig(cfg)
+	}
+
+	const address = await findReceiverAddress(cfg.receiver)
+
+	const onStatus = (status) => {
+		ui.setStatus(status)
+	}
+	const client = createClient(address, onStatus)
+	const ui = createUi(client)
+}
+
+main()
+.catch(showError)

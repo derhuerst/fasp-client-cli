@@ -21,10 +21,14 @@
 		"node": ">=7.6"
 	},
 	"dependencies": {
+		"chalk": "^2.3.2",
 		"env-paths": "^1.0.0",
+		"fasp-client": "^0.1.1",
 		"mkdirp": "^0.5.1",
 		"mri": "^1.1.0",
+		"prompt-skeleton": "^1.0.1",
 		"search-fasp-receivers": "^0.1.0",
-		"select-prompt": "^0.3.1"
+		"select-prompt": "^0.3.1",
+		"strip-ansi": "^4.0.0"
 	}
 }
