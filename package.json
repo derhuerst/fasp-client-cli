@@ -23,11 +23,11 @@
 	"dependencies": {
 		"chalk": "^2.3.2",
 		"env-paths": "^1.0.0",
-		"fasp-client": "^0.2.0",
+		"fasp-client": "^0.3.0",
 		"mkdirp": "^0.5.1",
 		"mri": "^1.1.0",
 		"prompt-skeleton": "^1.0.1",
-		"search-fasp-receivers": "^0.1.0",
+		"search-fasp-receivers": "^0.2.0",
 		"select-prompt": "^0.3.1",
 		"strip-ansi": "^4.0.0",
 		"window-size": "^1.1.0"

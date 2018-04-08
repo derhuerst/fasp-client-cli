@@ -56,10 +56,10 @@ const main = async () => {
 
 	const address = await findReceiverAddress(cfg.receiver)
 
-	const onStatus = (status) => {
-		ui.setStatus(status)
+	const onProp = (prop, val) => {
+		ui.setProp(prop, val)
 	}
-	const client = createClient(address, onStatus)
+	const client = createClient(address, onProp)
 	withLocalFiles(client)
 	const ui = createUi(client)
 }
