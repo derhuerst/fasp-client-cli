@@ -15,11 +15,11 @@ const argv = mri(process.argv.slice(2), {
 
 if (argv.help || argv.h) {
 	process.stdout.write(`
-fasp-server --scan
+fasp-client --scan
     Searches for receivers and lets you pick one. Also connects to it.
-fasp-server
+fasp-client
     Connects to the receiver you used the last time.
-fasp-server [--receiver <id>]
+fasp-client [--receiver <id>]
     Connects to the receiver with the specified ID.
 \n`)
 	process.exit(0)
@@ -46,7 +46,7 @@ const findReceiverAddress = require('./lib/find-receiver-address')
 const createUi = require('./lib/ui')
 
 const main = async () => {
-	let cfg = await readConfig()
+	let cfg = (await readConfig()) || {}
 	if (argv.receiver) {
 		cfg.receiver = argv.receiver
 	} if (argv.scan || !cfg || !cfg.receiver) {
