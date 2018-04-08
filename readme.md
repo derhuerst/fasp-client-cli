@@ -1,6 +1,6 @@
 # fasp-client-cli
 
-**Control Friendly Audio Streaming Protocol receivers from the command line.**
+**Control [Friendly Audio Streaming Protocol](https://github.com/derhuerst/friendly-audio-streaming-protocol) receivers from the command line.**
 
 [![npm version](https://img.shields.io/npm/v/fasp-client-cli.svg)](https://www.npmjs.com/package/fasp-client-cli)
 ![ISC-licensed](https://img.shields.io/github/license/derhuerst/fasp-client-cli.svg)
