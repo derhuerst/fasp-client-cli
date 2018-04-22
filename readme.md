@@ -28,6 +28,18 @@ fasp-client [--receiver <id>]
     Connects to the receiver with the specified ID.
 ```
 
+Once your are connected to the server, you will be presented with a UI like this:
+
+```
+Some Title
+A Brand New Album
+An Indie Artist
++++++++++++++++++++++
+pause space  ◀︎ h l ▶︎  vol ↑100↓  stop .  seek ← →  queue :
+```
+
+Press `:` and paste a URL to a remote audio file or an absolute path to a local one. After pressing enter, wait a few seconds for the file to be buffered and played back.
+
 
 ## Contributing
 
