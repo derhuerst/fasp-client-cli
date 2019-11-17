@@ -1,7 +1,7 @@
 {
 	"name": "fasp-client-cli",
 	"description": "Control Friendly Audio Streaming Protocol receivers from the command line.",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"bin": {
 		"fasp-client": "./cli.js"
 	},
